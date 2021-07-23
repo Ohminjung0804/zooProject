@@ -70,23 +70,24 @@ class Other{
 	}
 	public void total() {
 		int sum = 0;
-		if(restNamelist.size() >= 0 ) {
+		if(!restNamelist.isEmpty()) {
 			System.out.println("--------------------------------------------");
 			System.out.print("사용할 식당 : ");
 			for(int i = 0; i < restNamelist.size(); i++) {
 				System.out.print(restNamelist.get(i) + " ");
 			}
+			System.out.println("");
 		}
-		if(desertNamelist.size() >= 0) {
-			System.out.print(" ========디저트 ========");
+		if(!desertNamelist.isEmpty()) {
+			System.out.println("========디저트 ========");
 			for(int i =0; i < desertNamelist.size(); i++) {
-				System.out.print(desertNamelist.get(i) + "  " +desertCount.get(i) + " = " + priceCheck.get(i));
+				System.out.println(desertNamelist.get(i) + "  " +desertCount.get(i) + "개   = " + priceCheck.get(i));
 			}
 			System.out.print("총 금액 : ");
-			for(int i= 0; i < priceCheck.get(i); i++) {
+			for(int i= 0; i < priceCheck.size(); i++) {
 				sum += priceCheck.get(i);
 			}
-			System.out.println(sum);
+			System.out.println(sum+ "원");
 		}
 	}
 }
